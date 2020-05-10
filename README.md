@@ -5,6 +5,7 @@ Allows team managers to generate a summary of the members of their team.
 - [About This Project](#about-this-project)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Author](#author)
 - [Questions](#questions)
 ## Installation
@@ -15,6 +16,11 @@ npm i
 ## Usage
 Input team members and member info for as many people as you need, and an HTML page will be automatically generated for your team.  
 For use by team managers to easily organize their team members.
+## Testing
+To test the functions of this project, run the following command:
+```
+npm run test
+```
 ## Author
 Daniel Moody-Huhn:
 - https://github.com/HuhnDaniel/
