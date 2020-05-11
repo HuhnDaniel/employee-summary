@@ -73,14 +73,29 @@ function promptUser() {
 
 async function init() {
     const employeesArr = [];
-    let employee;
+    let teamMember;
 
     do {
-        employee = await promptUser();
-        employeesArr.push(employee);
-    } while (employee.addMember === true);
+        teamMember = await promptUser();
+        let employee;
 
-    console.log(employeesArr);
+        switch (teamMember.role) {
+            case "Manager":
+                employee = new Manager(teamMember.name, teamMember.id, teamMember.email, teamMember.officeNumber);
+                break;
+            case "Engineer":
+                employee = new Engineer(teamMember.name, teamMember.id, teamMember.email, teamMember.github);
+                break;
+            case "Intern":
+                employee = new Intern(teamMember.name, teamMember.id, teamMember.email, teamMember.school);
+                break;
+        }
+
+        employeesArr.push(employee);
+    } while (teamMember.addMember === true);
+
+    const html = render(employeesArr);
+    console.log(html);
 }
 
 init();
