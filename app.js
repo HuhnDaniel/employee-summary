@@ -63,6 +63,11 @@ function promptUser() {
             },
             name: "school"
         },
+        {
+            type: "confirm",
+            message: "Would you like to add another team member?",
+            name: "addMember"
+        }
     ]);
 }
 
