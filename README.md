@@ -1,8 +1,7 @@
-# employee-summary
+# Team Organizer
 ![GitHub repo size](https://img.shields.io/github/repo-size/HuhnDaniel/employee-summary)  
 Allows team managers to generate a summary of the members of their team.
 ## Table of Contents
-- [About This Project](#about-this-project)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Testing](#testing)
