@@ -71,7 +71,19 @@ function promptUser() {
     ]);
 }
 
-promptUser();
+async function init() {
+    const employeesArr = [];
+    let employee;
+
+    do {
+        employee = await promptUser();
+        employeesArr.push(employee);
+    } while (employee.addMember === true);
+
+    console.log(employeesArr);
+}
+
+init();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
