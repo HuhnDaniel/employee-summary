@@ -16,6 +16,11 @@ const render = require("./lib/htmlRenderer");
 function promptUser() {
     return inquirer.prompt([
         {
+            type: "input",
+            message: "Input employee name: ",
+            name: "name"
+        },
+        {
             type: "list",
             message: "What role does this employee fill?",
             choices: ["Manager", "Engineer", "Intern"],
@@ -39,7 +44,25 @@ function promptUser() {
                 return answers.role === "Manager";
             },
             name: "officeNumber"
-        }
+        },
+        // Only ask for GitHub username if employee is an engineer
+        {
+            type: "input",
+            message: "Input GitHub username: ",
+            when: function(answers) {
+                return answers.role === "Engineer";
+            },
+            name: "github"
+        },
+        // Only ask for school if employee is an intern
+        {
+            type: "input",
+            message: "Input intern school name: ",
+            when: function(answers) {
+                return answers.role === "Intern";
+            },
+            name: "school"
+        },
     ]);
 }
 
