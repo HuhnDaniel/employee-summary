@@ -23,7 +23,18 @@ function promptUser() {
         },
         {
             type: "input",
-            message: "What is this manager's office number?",
+            message: "Input employee ID: ",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "Input employee email address: ",
+            name: "email"
+        },
+        // Only ask for office number if employee is a manager
+        {
+            type: "input",
+            message: "Input manager office number: ",
             when: function(answers) {
                 return answers.role === "Manager";
             },
