@@ -5,7 +5,8 @@
   "main": "app.js",
   "directories": {
     "lib": "lib",
-    "test": "test"
+    "test": "test",
+    "test:watch": "jest --watch --verbose"
   },
   "scripts": {
     "test": "jest --verbose test/*"
