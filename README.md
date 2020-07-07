@@ -23,6 +23,6 @@ npm run test
 ## Author
 Daniel Moody-Huhn:
 - https://github.com/HuhnDaniel/
-- https://huhndaniel.github.io/
+- https://danielmoodyhuhn.herokuapp.com/
 ## Questions
 If you have any questions about the repo, please open an issue and I will attempt to respond to it as soon as possible.
